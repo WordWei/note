@@ -34,4 +34,4 @@
 
 ```
 
-> 方法：将数据导入到Excel中之后，读取输出流BigExcelWriter的sheet，对每个列进行宽度自适应调整，大小为Math.max(15 * 256, Math.min(255 * 256, sheet.getColumnWidth(i)*17/10))， 确保列的最大宽度与最小宽度，正常值为列宽的1.7倍，为经验值，其实1.5倍—1.7倍大小都是可以的。
+> 方法：将数据导入到Excel中之后，读取输出流BigExcelWriter的sheet，对每个列进行宽度自适应调整，大小为Math.max(15 * 256, Math.min(255 * 256,sheet.getColumnWidth(i)*17/10))， 确保列的最大宽度与最小宽度，正常值为列宽的1.7倍，为经验值，其实1.5倍—1.7倍大小都是可以的。
