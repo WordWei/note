@@ -191,7 +191,9 @@ public void createSubUserWithExceptionWrong() {
 
 
 
+注：
 
+>  Spring默认事务采用动态代理方式实现。因此只能对public进行增强（考虑到CGLib和JDKProxy兼容，protected也不支持）。在使用动态代理增强时，方法内调用也可以考虑采用AopContext.currentProxy()获取当前代理类。 
 
 
 
