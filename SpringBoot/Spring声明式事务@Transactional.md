@@ -69,6 +69,9 @@ public void createUserRight2(String name) throws IOException {
 
  一个复杂的业务逻辑，其中有数据库操作、IO 操作，在 IO 操作出现问题时希望让数据库事务也回滚，以确保逻辑的一致性。 
 
+>  所以我们才需要设置 @Transactional(rollbackFor = Exception.class)
+> 来不仅仅回滚RuntimeException 
+
 ###  3、确认事务传播配置是否符合自己的业务逻辑 
 
  在有些业务逻辑中，可能会包含多次数据库操作，我们不一定希望将两次操作作为一个事务来处理，  需要仔细考虑事务传播的配置 。
